@@ -45,10 +45,10 @@ public abstract class Empleado {
 	}
 	
 	// Retorna el Suedlo Bruto
-	protected abstract int getSueldoBruto();
+	public abstract int getSueldoBruto();
 	
 	// Retorna Las Retenciones
-	protected abstract int getRetenciones();
+	public abstract int getRetenciones();
 	
 	public int getSueldoNeto() {
 		return (this.getSueldoBruto() - this.getRetenciones());

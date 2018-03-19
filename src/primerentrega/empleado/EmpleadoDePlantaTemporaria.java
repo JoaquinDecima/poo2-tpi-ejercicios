@@ -17,7 +17,7 @@ public class EmpleadoDePlantaTemporaria extends Empleado {
 	}
 	
 	// Retorna el Sueldo Bruto
-	protected int getSueldoBruto() {
+	public int getSueldoBruto() {
 		return(this.sueldoBasico + 40 * this.cantHorasExtras);
 	}
 	
@@ -27,7 +27,7 @@ public class EmpleadoDePlantaTemporaria extends Empleado {
 	}
 	
 	// Retorna las Retenciones
-	protected int getRetenciones() {
+	public int getRetenciones() {
 		return (this.getObraSocial() + this.getAportes());
 	}
 	
@@ -41,6 +41,7 @@ public class EmpleadoDePlantaTemporaria extends Empleado {
 		return(obraRet);
 	}
 	
+	// Retorna True si es myor a 50
 	private boolean esMayorA50 () {
 		java.util.Date hoy = new Date();
 		return((hoy.getYear() - this.fechaDeNacimiento.getYear())> 50);

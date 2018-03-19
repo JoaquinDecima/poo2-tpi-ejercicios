@@ -35,10 +35,27 @@ public class Empresa {
 		return(nombre);
 	}
 	
+	// Retorna el Total de Los sueldos Netos de Sus empleados
 	public int getTotalSueldosNetos() {
 		int netos = 0;
 		for (Empleado e : this.empleados)
 			netos += e.getSueldoNeto();
 		return(netos);
 	}
+	
+	// Retorna el Total de Los sueldos Brutos de Sus empleados
+	public int getTotalSueldosBrutos() {
+		int brutos = 0;
+		for (Empleado e : this.empleados)
+			brutos += e.getSueldoBruto();
+		return(brutos);
+	}
+	
+	// Retorna el Total de Las Retenciones de Sus empleados
+		public int getTotalRetenciones() {
+			int ret = 0;
+			for (Empleado e : this.empleados)
+				ret += e.getRetenciones();
+			return(ret);
+		}
 }
