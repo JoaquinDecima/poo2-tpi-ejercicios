@@ -1,8 +1,10 @@
-package primerEntrega;
+package primerEntrega.Empresa;
 
 import java.util.List;
+
+import primerEntrega.Empleado.Empleado;
+
 import java.util.ArrayList;
-import primerEntrega.Empleado;
 
 public class Empresa {
 	int cuit;								// CUIT de la Empresa en INT

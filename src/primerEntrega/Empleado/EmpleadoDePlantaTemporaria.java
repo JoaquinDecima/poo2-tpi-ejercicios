@@ -1,4 +1,4 @@
-package primerEntrega;
+package primerEntrega.Empleado;
 
 import java.sql.Date;
 
