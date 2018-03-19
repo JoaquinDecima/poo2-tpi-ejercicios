@@ -3,19 +3,19 @@ package primerEntrega.Empleado;
 import java.sql.Date;
 
 public class Empleado {
-	char nombre;
-	char direccion;
-	boolean estadoCivil = false;
-	java.sql.Date fechaDeNacimiento;
-	int sueldoBasico;
+	protected String nombre;
+	protected String direccion;
+	protected boolean estadoCivil = false;
+	protected java.sql.Date fechaDeNacimiento;
+	protected int sueldoBasico;
 	
 	// Retorna Nombre de Empleado
-	private char getNombre() {
+	private String getNombre() {
 		return(nombre);
 	}
 	
 	// Retorna la direccion del Empleado
-	private char getDireccion() {
+	private String getDireccion() {
 		return(direccion);
 	}
 	

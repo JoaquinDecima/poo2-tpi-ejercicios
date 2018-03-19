@@ -3,8 +3,8 @@ package primerEntrega.Empleado;
 import java.sql.Date;
 
 public class EmpleadoDePlantaTemporaria extends Empleado {
-	java.sql.Date fechaDeFin;
-	int cantHorasExtras;
+	private java.sql.Date fechaDeFin;
+	private int cantHorasExtras;
 	
 	// Retorna la fecha de Fin de Actividad
 	private java.sql.Date getFechaFin(){

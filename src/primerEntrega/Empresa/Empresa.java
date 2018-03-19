@@ -7,9 +7,9 @@ import primerEntrega.Empleado.Empleado;
 import java.util.ArrayList;
 
 public class Empresa {
-	int cuit;								// CUIT de la Empresa en INT
-	char nombre;							// Nombre de la Empresa en Char
-	List empleados = new ArrayList();		// Lista de Empleados
+	private int cuit;								// CUIT de la Empresa en INT
+	private String nombre;							// Nombre de la Empresa en Char
+	private List empleados = new ArrayList();		// Lista de Empleados
 
 	// Agrega un empleado a la Empresa
 	private void addEmpleado(Empleado emp) {
@@ -27,7 +27,7 @@ public class Empresa {
 	}
 	
 	// Retorna el nombre de la Empresa
-	private char getNombre() {
+	private String getNombre() {
 		return(nombre);
 	}
 }

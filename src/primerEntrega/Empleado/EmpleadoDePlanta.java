@@ -1,8 +1,8 @@
 package primerEntrega.Empleado;
 
 public class EmpleadoDePlanta extends Empleado {
-	int cantDeHijos;
-	int antiguedad;
+	private int cantDeHijos;
+	private int antiguedad;
 	
 	// Retorna la Cantidad de Hijos
 	private int getCantDeHijos() {
