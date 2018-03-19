@@ -35,7 +35,7 @@ public class EmpleadoDePlanta extends Empleado {
 	}
 	
 	// Retorna las Retenciones
-	private int getRetenciones() {
+	protected int getRetenciones() {
 		return (this.getObraSocial() + this.getAportes());
 	}
 }

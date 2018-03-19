@@ -1,15 +1,13 @@
 package primerentrega.empresa;
 
-import java.util.List;
-
-import primerentrega.empleado.Empleado;
-
 import java.util.ArrayList;
+import java.util.List;
+import primerentrega.empleado.*;
 
 public class Empresa {
-	private int cuit;								// CUIT de la Empresa en INT
-	private String nombre;							// Nombre de la Empresa en Char
-	private List empleados = new ArrayList();		// Lista de Empleados
+	private int cuit;											// CUIT de la Empresa en INT
+	private String nombre;										// Nombre de la Empresa en Char
+	private List<Empleado> empleados = new ArrayList<Empleado>();		// Lista de Empleados
 
 	// Constructor del Objeto
 	public Empresa(int iCuit, String sNombre) {
@@ -35,5 +33,12 @@ public class Empresa {
 	// Retorna el nombre de la Empresa
 	private String getNombre() {
 		return(nombre);
+	}
+	
+	public int getTotalSueldosNetos() {
+		int netos = 0;
+		for (Empleado e : this.empleados)
+			netos += e.getSueldoNeto();
+		return(netos);
 	}
 }

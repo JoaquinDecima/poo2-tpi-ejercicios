@@ -15,4 +15,34 @@ public class EmpleadoDePlantaTemporaria extends Empleado {
 	private int getCantHorasExtras() {
 		return (cantHorasExtras);
 	}
+	
+	// Retorna el Sueldo Bruto
+	protected int getSueldoBruto() {
+		return(this.sueldoBasico + 40 * this.cantHorasExtras);
+	}
+	
+	// Retorna los Aportes
+	private int getAportes() {
+		return(this.getSueldoBruto() / 10 + 5 * this.cantHorasExtras);
+	}
+	
+	// Retorna las Retenciones
+	protected int getRetenciones() {
+		return (this.getObraSocial() + this.getAportes());
+	}
+	
+	//Retorna Obra Social
+	private int getObraSocial() {
+		int obraRet;
+		obraRet = this.getSueldoBruto() / 10;
+		if (this.esMayorA50()) {
+			obraRet = obraRet + 25;
+		}
+		return(obraRet);
+	}
+	
+	private boolean esMayorA50 () {
+		java.util.Date hoy = new Date();
+		return((hoy.getYear() - this.fechaDeNacimiento.getYear())> 50);
+	}
 }

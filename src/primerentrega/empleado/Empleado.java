@@ -2,7 +2,7 @@ package primerentrega.empleado;
 
 import java.util.Date;
 
-public class Empleado {
+public abstract class Empleado {
 	protected String nombre;
 	protected String direccion;
 	protected boolean estadoCivil = false;
@@ -42,5 +42,15 @@ public class Empleado {
 	// Retorna el sueldo basico de un Empleado
 	protected int getSueldoBasico() {
 		return (sueldoBasico);
+	}
+	
+	// Retorna el Suedlo Bruto
+	protected abstract int getSueldoBruto();
+	
+	// Retorna Las Retenciones
+	protected abstract int getRetenciones();
+	
+	public int getSueldoNeto() {
+		return (this.getSueldoBruto() - this.getRetenciones());
 	}
 }
