@@ -1,13 +1,13 @@
-package primerEntrega.Empleado;
+package primerentrega.empleado;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class EmpleadoDePlantaTemporaria extends Empleado {
-	private java.sql.Date fechaDeFin;
+	private java.util.Date fechaDeFin;
 	private int cantHorasExtras;
 	
 	// Retorna la fecha de Fin de Actividad
-	private java.sql.Date getFechaFin(){
+	private java.util.Date getFechaFin(){
 		return (fechaDeFin);
 	}
 	

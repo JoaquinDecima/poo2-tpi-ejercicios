@@ -1,4 +1,4 @@
-package primerEntrega.Empleado;
+package primerentrega.empleado;
 
 public class EmpleadoDePlanta extends Empleado {
 	private int cantDeHijos;

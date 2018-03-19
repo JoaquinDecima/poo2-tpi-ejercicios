@@ -1,12 +1,12 @@
-package primerEntrega.Empleado;
+package primerentrega.empleado;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Empleado {
 	protected String nombre;
 	protected String direccion;
 	protected boolean estadoCivil = false;
-	protected java.sql.Date fechaDeNacimiento;
+	protected java.util.Date fechaDeNacimiento;
 	protected int sueldoBasico;
 	
 	// Retorna Nombre de Empleado
@@ -35,7 +35,7 @@ public class Empleado {
 	}
 	
 	// Retorna la Fecha de Nacimiento
-	private java.sql.Date getFechaDeNacimiento(){
+	private java.util.Date getFechaDeNacimiento(){
 		return (fechaDeNacimiento);
 	}
 	

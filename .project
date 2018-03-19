@@ -3,6 +3,7 @@
 	<name>poo2-tpi-ejercicios</name>
 	<comment></comment>
 	<projects>
+		<project>joda-time</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
