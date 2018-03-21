@@ -9,6 +9,7 @@ public abstract class Empleado {
 	protected java.util.Date fechaDeNacimiento;
 	protected int sueldoBasico;
 	
+	
 	// Retorna Nombre de Empleado
 	private String getNombre() {
 		return(nombre);
