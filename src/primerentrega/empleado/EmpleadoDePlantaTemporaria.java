@@ -2,6 +2,8 @@ package primerentrega.empleado;
 
 import java.util.Date;
 
+import primerentrega.recibodehaberes.ReciboDeHaberes;
+
 public class EmpleadoDePlantaTemporaria extends Empleado {
 	private java.util.Date fechaDeFin;
 	private int cantHorasExtras;
@@ -45,5 +47,13 @@ public class EmpleadoDePlantaTemporaria extends Empleado {
 	private boolean esMayorA50 () {
 		java.util.Date hoy = new Date();
 		return((hoy.getYear() - this.fechaDeNacimiento.getYear())> 50);
+	}
+
+	// Setea el Desglose
+	public void setDesglose(ReciboDeHaberes recibo) {
+		recibo.addConcepto("Sueldo Basico", this.getSueldoBasico());
+		recibo.addConcepto("Horas Extras", (40 * this.cantHorasExtras));
+		recibo.addConcepto("Aportes", (0 - this.getAportes()));
+		recibo.addConcepto("Obra Social", (0 - this.getObraSocial()));
 	}
 }

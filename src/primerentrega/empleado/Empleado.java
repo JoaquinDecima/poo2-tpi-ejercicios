@@ -1,6 +1,9 @@
 package primerentrega.empleado;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import primerentrega.recibodehaberes.ReciboDeHaberes;
 
 public abstract class Empleado {
 	protected String nombre;
@@ -8,15 +11,15 @@ public abstract class Empleado {
 	protected boolean estadoCivil = false;
 	protected java.util.Date fechaDeNacimiento;
 	protected int sueldoBasico;
-	
+	protected List<ReciboDeHaberes> recibos = new ArrayList<ReciboDeHaberes>();
 	
 	// Retorna Nombre de Empleado
-	private String getNombre() {
+	public String getNombre() {
 		return(nombre);
 	}
 	
 	// Retorna la direccion del Empleado
-	private String getDireccion() {
+	public String getDireccion() {
 		return(direccion);
 	}
 	
@@ -50,6 +53,12 @@ public abstract class Empleado {
 	
 	// Retorna Las Retenciones
 	public abstract int getRetenciones();
+	
+	public abstract void setDesglose(ReciboDeHaberes recibo);
+	
+	public void addRecibo(ReciboDeHaberes r) {
+		recibos.add(r);
+	}
 	
 	public int getSueldoNeto() {
 		return (this.getSueldoBruto() - this.getRetenciones());

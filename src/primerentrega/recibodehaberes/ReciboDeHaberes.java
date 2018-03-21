@@ -11,4 +11,16 @@ public class ReciboDeHaberes {
 	private int sueldoBruto;
 	private int sueldoNeto;
 	private Map<String, Integer> desglose = new HashMap<String, Integer>();
+	
+	public ReciboDeHaberes(String sNombreDelEmpleado, String sDireccion, int iSueldoBruto, int iSueldoNeto){
+		this.nombreDelEmpleado = sNombreDelEmpleado;
+		this.direccion = sDireccion;
+		this.sueldoBruto = iSueldoBruto;
+		this.sueldoNeto = iSueldoNeto;
+	}
+	
+	// Agregar un nuevo Concepto al Desgloce
+	public void addConcepto(String concepto, Integer valor) {
+		desglose.put(concepto, valor);
+	}
 }

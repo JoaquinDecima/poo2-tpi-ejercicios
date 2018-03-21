@@ -3,6 +3,7 @@ package primerentrega.empresa;
 import java.util.ArrayList;
 import java.util.List;
 import primerentrega.empleado.*;
+import primerentrega.recibodehaberes.ReciboDeHaberes;
 
 public class Empresa {
 	private int cuit;											// CUIT de la Empresa en INT
@@ -52,10 +53,24 @@ public class Empresa {
 	}
 	
 	// Retorna el Total de Las Retenciones de Sus empleados
-		public int getTotalRetenciones() {
-			int ret = 0;
-			for (Empleado e : this.empleados)
-				ret += e.getRetenciones();
-			return(ret);
-		}
+	public int getTotalRetenciones() {
+		int ret = 0;
+		for (Empleado e : this.empleados)
+			ret += e.getRetenciones();
+		return(ret);
+	}
+	
+	//Crea el recibo
+	private ReciboDeHaberes createRecibo(Empleado e) {
+		ReciboDeHaberes recibo = new ReciboDeHaberes(e.getNombre(), e.getDireccion(), e.getSueldoBruto(), e.getSueldoNeto());
+		e.setDesglose(recibo);
+		return(recibo);
+	}
+	
+	//Genera los recibos de sueldo
+	public void generarRecibos() {
+		ReciboDeHaberes temp;
+		for (Empleado e : this.empleados)
+			e.addRecibo(this.createRecibo(e));
+	}
 }
