@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
+import terceraentrega.supermercado.Supermercado;
 
 import terceraentrega.productos.Producto;
 
