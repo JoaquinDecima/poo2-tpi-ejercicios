@@ -1,9 +1,9 @@
-package supermercado;
+package terceraentrega;
 
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
+import terceraentrega.productos.ProductoPrimeraNecesidad;
 
 public class ProductoPrimeraNecesidadTest {
 
@@ -18,4 +18,6 @@ public class ProductoPrimeraNecesidadTest {
 	public void testCalcularPrecio() {
 		assertEquals(new Double(7.2), leche.getPrecio());
 	}
+	
+	
 }
