@@ -5,10 +5,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReciboDeHaberes {
+	@SuppressWarnings("unused")
 	private String nombreDelEmpleado;
+	@SuppressWarnings("unused")
 	private String direccion;
+	@SuppressWarnings("unused")
 	private Date fechaDeEmision = new Date();
+	@SuppressWarnings("unused")
 	private int sueldoBruto;
+	@SuppressWarnings("unused")
 	private int sueldoNeto;
 	private Map<String, Integer> desglose = new HashMap<String, Integer>();
 	

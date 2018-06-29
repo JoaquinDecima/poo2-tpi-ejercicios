@@ -17,21 +17,25 @@ public class Empresa {
 	}
 	
 	// Agrega un empleado a la Empresa
+	@SuppressWarnings("unused")
 	private void addEmpleado(Empleado emp) {
 		empleados.add(emp);
 	}
 	
 	// Retorna la cantidad de empleados de la empresa
+	@SuppressWarnings("unused")
 	private int cantEmpleados() {
 		return (empleados.size());
 	}
 	
 	// Retorna el CUIT de la Empresa
+	@SuppressWarnings("unused")
 	private int getCUIT() {
 		return (cuit);
 	}
 	
 	// Retorna el nombre de la Empresa
+	@SuppressWarnings("unused")
 	private String getNombre() {
 		return(nombre);
 	}
@@ -69,7 +73,6 @@ public class Empresa {
 	
 	//Genera los recibos de sueldo
 	public void generarRecibos() {
-		ReciboDeHaberes temp;
 		for (Empleado e : this.empleados)
 			e.addRecibo(this.createRecibo(e));
 	}

@@ -9,7 +9,7 @@ public abstract class Empleado {
 	protected String nombre;
 	protected String direccion;
 	protected boolean estadoCivil = false;
-	protected java.util.Date fechaDeNacimiento;
+	protected Date fechaDeNacimiento;
 	protected int sueldoBasico;
 	protected List<ReciboDeHaberes> recibos = new ArrayList<ReciboDeHaberes>();
 	
@@ -29,16 +29,19 @@ public abstract class Empleado {
 	}
 	
 	// El estado civil cambia a True
+	@SuppressWarnings("unused")
 	private void seCaso() {
 		estadoCivil = true;
 	}
 	
 	// El estado Civil cambia a False
+	@SuppressWarnings("unused")
 	private void seDivercio() {
 		estadoCivil = false;
 	}
 	
 	// Retorna la Fecha de Nacimiento
+	@SuppressWarnings("unused")
 	private java.util.Date getFechaDeNacimiento(){
 		return (fechaDeNacimiento);
 	}

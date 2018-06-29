@@ -9,11 +9,13 @@ public class EmpleadoDePlantaTemporaria extends Empleado {
 	private int cantHorasExtras;
 	
 	// Retorna la fecha de Fin de Actividad
+	@SuppressWarnings("unused")
 	private java.util.Date getFechaFin(){
 		return (fechaDeFin);
 	}
 	
 	// Retorna las Horas Extras
+	@SuppressWarnings("unused")
 	private int getCantHorasExtras() {
 		return (cantHorasExtras);
 	}
@@ -44,6 +46,7 @@ public class EmpleadoDePlantaTemporaria extends Empleado {
 	}
 	
 	// Retorna True si es myor a 50
+	@SuppressWarnings("deprecation")
 	private boolean esMayorA50 () {
 		java.util.Date hoy = new Date();
 		return((hoy.getYear() - this.fechaDeNacimiento.getYear())> 50);
